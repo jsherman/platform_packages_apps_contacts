@@ -96,21 +96,21 @@ public class DialtactsActivity extends TabActivity implements TabHost.OnTabChang
     
     private void setupCallLogTab() {
         mTabHost.addTab(mTabHost.newTabSpec("call_log")
-                .setIndicator(getString(R.string.recentCallsIconLabel),
+                .setIndicator("",//getString(R.string.recentCallsIconLabel),
                         getResources().getDrawable(R.drawable.ic_tab_recent))
                 .setContent(new Intent("com.android.phone.action.RECENT_CALLS")));
     }
 
     private void setupDialerTab() {
         mTabHost.addTab(mTabHost.newTabSpec("dialer")
-                .setIndicator(getString(R.string.dialerIconLabel),
+                .setIndicator("",//getString(R.string.dialerIconLabel),
                         getResources().getDrawable(R.drawable.ic_tab_dialer))
                 .setContent(new Intent("com.android.phone.action.TOUCH_DIALER")));
     }
 
     private void setupContactsTab() {
         mTabHost.addTab(mTabHost.newTabSpec("contacts")
-                .setIndicator(getText(R.string.contactsIconLabel),
+                .setIndicator("",//getText(R.string.contactsIconLabel),
                         getResources().getDrawable(R.drawable.ic_tab_contacts))
                 .setContent(new Intent(UI.LIST_DEFAULT)));
     }
@@ -136,7 +136,7 @@ public class DialtactsActivity extends TabActivity implements TabHost.OnTabChang
         Drawable tab2Icon = getResources().getDrawable(R.drawable.ic_tab_starred);
 
         mTabHost.addTab(mTabHost.newTabSpec("favorites")
-                .setIndicator(getString(R.string.contactsFavoritesLabel), tab2Icon)
+                .setIndicator(""/*getString(R.string.contactsFavoritesLabel)*/, tab2Icon)
                 .setContent(tab2Intent));
     }
 
